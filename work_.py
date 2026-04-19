@@ -18,7 +18,7 @@ print(df[df['distance'] > mean_dist])
 df[df['distance'] > mean_dist].to_json('filtered_walk.json', orient='records', indent=4)
 
 
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(7, 4))
 plt.plot(df['x'], df['y'], label='траєкторія', color='#FF69B4', alpha=0.7, linewidth=2)
 plt.scatter(0,0, color='#9400D3', marker='o', label='початок (0,0)')
 plt.scatter(df['x'].iloc[-1], df['y'].iloc[-1], color='#800000', marker='X', label='кінець')
