@@ -14,9 +14,10 @@ mean_dist = df['distance'].mean()
 print(f"максимальна відстань: {max_dist}")
 print(f"середня відстань: {mean_dist}")
 print("\nточки з відстанню більшою за середню:")
+#пораховано відстань
 print(df[df['distance'] > mean_dist])
 df[df['distance'] > mean_dist].to_json('filtered_walk.json', orient='records', indent=4)
-
+#додано новий файл
 
 plt.figure(figsize=(7, 4))
 plt.plot(df['x'], df['y'], label='траєкторія', color='#FF69B4', alpha=0.7, linewidth=2)
@@ -28,3 +29,4 @@ plt.title('шлях до точки відхилення')
 plt.grid(True)
 plt.legend()
 plt.show()
+#створено графік
